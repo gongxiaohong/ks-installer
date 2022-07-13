@@ -4,13 +4,14 @@ replicaCount: 1
 
 image:
   # Overrides the image tag whose default is the chart appVersion.
-  ks_controller_manager_repo: kubesphere/ks-controller-manager
-  ks_controller_manager_tag: ""
+  ks_controller_manager_repo: registry.cn-hangzhou.aliyuncs.com/onepower/ks-controller-manager
+  ks_controller_manager_tag: v3.2.1_1.1.8_cluster
 
-  ks_apiserver_repo: kubesphere/ks-apiserver
-  ks_apiserver_tag: ""
-  ks_console_repo: "kubesphere/ks-console"
-  ks_console_tag: ""
+  ks_apiserver_repo: registry.cn-hangzhou.aliyuncs.com/onepower/ks-apiserver
+  ks_apiserver_tag: v3.2.1_1.1.8_cluster
+
+  ks_console_repo: registry.cn-hangzhou.aliyuncs.com/onepower/ks-console
+  ks_console_tag: v3.2.1_1.1.0.0610_1
 
   ks_kubectl_repo: kubesphere/kubectl
   ks_kubectl_tag: ""
@@ -76,7 +77,7 @@ kube_version: "v1.19.4"
 
 env: []
 
-tolerations: 
+tolerations:
   - key: node-role.kubernetes.io/master
     effect: NoSchedule
   - key: CriticalAddonsOnly
